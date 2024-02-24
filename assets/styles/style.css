@@ -210,6 +210,10 @@ p {
     top: -5%;
 }
 
+.row{
+    justify-content: space-around;
+}
+
 /* Footer */
 .copyright {
     font-size: 9px;

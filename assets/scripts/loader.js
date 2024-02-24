@@ -17,7 +17,6 @@ html.data('previous-overflow', html.css('overflow'));
 html.css('overflow', 'hidden');
 window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
-
 /* =Loader Fadeout
 -------------------------------------------------------------- */
 $(window).load(function() {

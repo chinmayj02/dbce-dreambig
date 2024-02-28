@@ -53,6 +53,7 @@
     position: relative;
     width: 300px;
     float: right;
+    text-align: left;
   }
   
   .flag-wrapper {
@@ -103,7 +104,7 @@
   }
   
   .direction-r .flag:before {
-    left: -91px;
+    left: -36px;
   }
   
   .direction-l .flag:after {

@@ -229,6 +229,7 @@ p {
 
 .row {
     justify-content: space-around;
+}
 section {
     overflow: hidden;
 }

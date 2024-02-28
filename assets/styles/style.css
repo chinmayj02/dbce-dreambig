@@ -9,6 +9,7 @@
     --raisin-black: #211D21;
     --rich-black: #121313;
     --dark-grey: #212024;
+    --footer-grey:#101011;
 }
 
 body {
@@ -234,6 +235,10 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     line-height: 1.5em;
+}
+
+.footer{
+    background-color: var(--footer-grey);
 }
 
 /* Animations */

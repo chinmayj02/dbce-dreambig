@@ -14,64 +14,54 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // glimpses section
+
 document.addEventListener("DOMContentLoaded", function() {
+  // Image data array (you can add more images here)
+  var imageData = [
+    { type: "img", url: "./assets/images/IMG_1369.JPG", link: "https://example.com/link1" },
+    { type: "img", url: "./assets/images/IMG_1416.JPG", link: "https://example.com/link2" },
+    { type: "img", url: "./assets/images/IMG_1433.JPG", link: "https://example.com/link3" },
+    { type: "img", url: "./assets/images/IMG_1441.JPG", link: "https://example.com/link4" },
+    { type: "img", url: "./assets/images/IMG_1517.JPG", link: "https://example.com/link5" },
+    { type: "img", url: "./assets/images/IMG_1527.JPG", link: "https://example.com/link6" },
+    { type: "img", url: "./assets/images/IMG_1549.JPG", link: "https://example.com/link7" },
+    // Add more images similarly
+  ];
 
-    setRandomSizeForThumbs();
+  // Interval for auto-changing images (3 seconds)
+  setInterval(changeImages, 3000);
 
-    function getRandomSize() {
-        const minWidth = 100; // Minimum width
-        const maxWidth = 300; // Maximum width
-        const minHeight = 150; // Minimum height
-        const maxHeight = 250; // Maximum height
-      
-        const width = Math.floor(Math.random() * (maxWidth - minWidth + 1)) + minWidth;
-        const height = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
-      
-        return { width, height };
+  function changeImages() {
+    // Get two unique random indices
+    var randomIndices = getUniqueRandomIndices(2, imageData.length);
+
+    // Create a new list item for each random index
+    randomIndices.forEach(function(index) {
+      var randomImage = imageData[index];
+      var li = document.createElement("li");
+      li.style.width = "168.5px";
+      li.style.height = "168px";
+      li.innerHTML = '<a target="_blank" href="' + randomImage.link + '" style="background-image: url(\'' + randomImage.url + '\'); cursor: default; width: 169px; height: 168px; top: 0px; transition: all 400ms linear 400ms; transform: rotate3d(1, 1, 0, 0deg); left: 0px;"></a>';
+
+      // Add the new list item to the imageGrid
+      var imageGrid = document.getElementById("imageGrid");
+      if (imageGrid.childElementCount >= 8) {
+        // Remove the first child if there are already 8 children
+        imageGrid.removeChild(imageGrid.firstElementChild);
       }
+      imageGrid.appendChild(li);
+    });
+  }
 
-    var data = [
-        {type: "img", src: "./assets/images/IMG_1369.JPG", },
-        {type: "img", src: "./assets/images/IMG_1416.JPG", },
-        {type: "img", src: "./assets/images/IMG_1433.JPG", },
-        {type: "img", src: "./assets/images/IMG_1441.JPG",},
-        {type: "img", src: "./assets/images/IMG_1517.JPG", },
-        {type: "img", src: "./assets/images/IMG_1527.JPG", },
-        {type: "img", src: "./assets/images/IMG_1549.JPG", },
-       ];
-       
-       // html templates
-       var tplimg = '<a href="#" class="thumb thumb-img" style="background-image: url(%src%)">'
-                  + '<img src="%src%" alt="%title%"/>'
-                  + '</a>';
-       var tpltxt = '<a href="#" class="thumb thumb-txt">'
-                  + '</a>';
-       
-                  function setRandomSizeForThumbs() {
-                    var thumbs = document.getElementsByClassName('thumb');
-                    for (var i = 0; i < thumbs.length; i++) {
-                      var thumb = thumbs[i];
-                      var size = getRandomSize();
-                  
-                      thumb.style.width = size.width + 'px';
-                      thumb.style.height = size.height + 'px';
-                    }
-                  }
-
-       var cnt = document.getElementById("thumbs");
-       var cs = "";
-       for (var i = 0; i < data.length; i++) {
-        var tpl = data[i].type == "img" ? tplimg : tpltxt;
-        var size = getRandomSize();
-      
-        // Replace strings including width and height
-        
-      
-        for (var k in data[i]) {
-          tpl = tpl.replace(eval("/%"+k+"%/g"), data[i][k]);
-        }
-      
-        cs += tpl;
+  // Function to get unique random indices
+  function getUniqueRandomIndices(count, max) {
+    var indices = [];
+    while (indices.length < count) {
+      var randomIndex = Math.floor(Math.random() * max);
+      if (!indices.includes(randomIndex)) {
+        indices.push(randomIndex);
       }
-       cnt.innerHTML = cs;
-  });
+    }
+    return indices;
+  }
+});

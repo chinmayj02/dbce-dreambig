@@ -89,7 +89,13 @@ h2 {
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 16px;
+    font-family: "Montserrat", arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    text-align: center;
 }
 
 h4 {
@@ -98,7 +104,7 @@ h4 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.7em;
 }
 
@@ -126,6 +132,10 @@ h4 {
 
 p {
     margin: 10px 0;
+}
+
+.text-acent{
+    color:var(--red);
 }
 
 .padded,
@@ -249,6 +259,30 @@ section {
 
 .row {
     justify-content: space-around;
+}
+.sponsor-logo-row{
+    display: flex;
+    flex-direction: row;
+    max-width: inherit;
+}
+.sponsor-logo{
+    flex-basis: 50%;
+    max-width: 50vw;
+    max-height: 25vh; 
+}
+
+/* Media query for devices with a maximum width of 768 pixels */
+@media only screen and (max-width: 768px) {
+    .sponsor-logo-row {
+        flex-direction: column;
+        /* margin: auto; */
+        justify-content: space-around;
+        text-align: center;
+    }
+    .sponsor-logo{
+        object-position: center;
+        text-align: center;
+    }
 }
 
 /* Footer */

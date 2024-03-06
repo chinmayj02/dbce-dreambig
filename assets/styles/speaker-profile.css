@@ -12,6 +12,10 @@
     /* margin: 32px; */
 }
 
+.speaker-row-item{
+    flex-basis: 50%;
+}
+
 .card {
     min-width: 300px;
     margin: 20px;
@@ -37,7 +41,7 @@
 .card-header {
     position: relative;
     display: flex;
-    height: 200px;
+    height: 250px;
     flex-shrink: 0;
     width: 100%;
     transition: 0.3s;
@@ -63,8 +67,8 @@
 }
 
 .card-avatar {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     object-position: center;

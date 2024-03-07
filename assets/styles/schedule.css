@@ -65,7 +65,7 @@
 
 .flag {
     position: relative;
-    display: inline;
+    display: inline-block;
     background: rgb(248, 248, 248);
     color: black;
     padding: 6px 10px;
@@ -75,6 +75,14 @@
     text-align: left;
 }
 
+.flag:hover{
+    cursor: pointer;
+}
+
+.flag small {
+    display: block; /* Display "speaker 1" on a new line */
+    font-weight: normal; /* Adjust font weight if necessary */
+}
 .direction-l .flag {
     -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
@@ -158,12 +166,26 @@
     background: rgb(248, 248, 248);
 }
 
-.desc {
+.desc{
     margin: 1em 0.75em 0 0;
-
+    display: none;
     font-size: 0.77777em;
     font-style: italic;
     line-height: 1.5em;
+    transition-property: all;
+    /* Smooth transition for opacity */
+    opacity: 0;
+    /* Initially set opacity to 0 */
+}
+/* .desc:focus{
+    transition: all 0.5s ease-in-out;
+}  */
+.show {
+    display: block;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    /* Show the element with opacity transition */
+    z-index: 15;
 }
 
 .direction-r .desc {
@@ -246,17 +268,7 @@
         float: none;
     }
 
-    .desc {
-        display: none;
-        /* position: relative;
-      margin: 1em 0 0 0;
-      padding: 1em;
-      -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-      -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-      box-shadow: 0 0 1px rgba(0,0,0,0.20);
-      
-    z-index: 15; */
-    }
+    
 
     .direction-l .desc,
     .direction-r .desc {

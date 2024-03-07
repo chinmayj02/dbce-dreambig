@@ -199,4 +199,9 @@
         flex-direction: column;
         margin: auto;
     }
+    .card-fullname {
+       
+        font-size: smaller;
+        
+    }
 }

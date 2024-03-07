@@ -226,6 +226,10 @@ p {
     opacity: 1;
 }
 
+.intro{
+
+}
+
 /* Background */
 .background {
     background: url(../images/dbcedreambig.JPG) no-repeat 50% 100%;
@@ -336,6 +340,16 @@ section {
 }
 
 /* Responsive Styles */
+
+/* Media query for devices with a maximum width of 768 pixels */
+@media only screen and (max-width: 768px) {
+    .intro{
+        font-size: smaller;
+        padding: 10px;
+        padding-bottom: 0;
+    }
+}
+
 /* Tablet Portrait */
 @media all and (min-width: 700px) {
     .center-mobile {
@@ -651,3 +665,6 @@ section {
     text-align: center
 }
 /* end */
+
+/* register button */
+

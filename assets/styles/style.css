@@ -251,6 +251,11 @@ header{
     padding-bottom: 200px;
 }
 
+#hero .dbce{
+    font-size: 40px;
+    font-weight: bold;
+}
+
 #hero .info .initiative{
     font-family: "Rouge Script", cursive;
     font-weight: 400;
@@ -426,7 +431,7 @@ section {
 @media only screen and (max-width: 768px) {
     .sponsor-logo-row {
         flex-direction: column;
-        /* margin: auto; */
+        margin: auto;
         justify-content: space-around;
         text-align: center;
     }
@@ -442,8 +447,13 @@ section {
         padding-top: 50px;
     }
 
+    #hero .dbce{
+        font-size: 25px;
+    }
+
     #hero .info .initiative{
         font-size: 25px;
+        font-weight: bold;
     }
     
     #hero .info .dreambig{

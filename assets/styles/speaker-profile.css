@@ -118,6 +118,7 @@
     font-weight: 700;
     font-size: 13px;
     margin-bottom: 8px;
+    color: aliceblue;
 }
 
 .card-content {
@@ -134,7 +135,7 @@
     min-height: 315px;
 }
 
-.expand-btn{
+.toggle-btn{
     display: none;
 }
 
@@ -213,7 +214,7 @@
     .card-jobtitle{
         font-size: x-small;
     }
-    .expand-btn{
+    .toggle-btn{
         display: block;
     }
     .expand{

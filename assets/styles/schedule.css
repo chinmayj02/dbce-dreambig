@@ -80,8 +80,8 @@
 }
 
 .flag small {
-    display: block; /* Display "speaker 1" on a new line */
-    font-weight: normal; /* Adjust font weight if necessary */
+    display: block;
+    font-weight: normal;
 }
 .direction-l .flag {
     -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);

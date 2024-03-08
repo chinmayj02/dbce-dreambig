@@ -258,10 +258,35 @@ header{
 }
 
 #hero .info .dreambig{
+    /* font-family: 'Abril Fatface', cursive;
+    font-size: 85px;
+    font-weight: 400;
+    text-transform: capitalize; */
+
+    width: 300px;
+    object-fit: cover;
+}
+
+#hero .info .dreambig-text{
     font-family: 'Abril Fatface', cursive;
     font-size: 85px;
     font-weight: 400;
     text-transform: capitalize;
+    text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--carmine),
+        0 0 30px var(--carmine),
+        /* 0 0 40px var(--carmine), */
+        0 0 55px var(--carmine),
+        0 0 70px var(--carmine);
+    position: relative;
+}
+
+#hero .info .dreambig-icon{
+    position: absolute;
+    width: 150px;
+    top: -37px;
+    left: 247px;
 }
 
 #hero .info .year{
@@ -368,6 +393,24 @@ section {
     flex-basis: 50%;
     max-width: 50vw;
     max-height: 25vh;
+    object-fit: contain;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+#sponsors {
+    background:whitesmoke;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    /* display: flex; */
+    width: 100%;
+    /* height: 90vh;  */
+    position: relative;
+    /* justify-content: center; */
+    border-radius: 10px;
+    color: var(--rich-black);
 }
 
 /* Media query for devices with a maximum width of 768 pixels */
@@ -384,12 +427,22 @@ section {
         text-align: center;
     }
 
+    #hero .info{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
     #hero .info .initiative{
         font-size: 20px;
     }
     
     #hero .info .dreambig{
-        font-size: 60px;
+        display: block !important;
+    }
+
+    #hero .info .dreambig-text{
+        display: none !important;
     }
 
     #hero .info .iic{

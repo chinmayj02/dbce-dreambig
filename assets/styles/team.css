@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arizonia&family=Rouge+Script&family=Ruthie&display=swap');
+
+:root {
+    --red: #C10206;
+    --carmine: #A50113;
+    --floral-white: #FFFBF2;
+    --chinese-white: #DFE2DB;
+    --raisin-black: #211D21;
+    --rich-black: #121313;
+    --dark-grey: #212024;
+    --footer-grey: #101011;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--rich-black);
+    color: var(--floral-white);
+    font: normal 16px "Cardo", georgia, serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+section {
+  padding: 60px 0;
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.show-nav{
+        top: 0px;
+}
+
+.navbar-brand{
+    color: var(--red);
+    font-family: 'Abril Fatface', cursive;
+}
+
+.navbar-brand:hover{
+    color: var(--red);
+}
+
+.navbar-toggler{
+    background:var(--carmine);
+}
+
+.nav-link{
+    color:var(--dark-grey);
+    font-family: "Montserrat", arial, sans-serif;
+}
+
+.nav-link:hover{
+    color:var(--floral-white);
+    background-color: var(--carmine);
+}
+
+.site-heading h2 {
+display: block;
+font-weight: 700;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+
+.site-heading h2 span {
+color: var(--carmine);
+}
+
+.site-heading h4 {
+display: inline-block;
+padding-bottom: 20px;
+position: relative;
+text-transform: capitalize;
+z-index: 1;
+}
+
+.site-heading h4::before {
+background: var(--carmine) none repeat scroll 0 0;
+bottom: 0;
+content: "";
+height: 2px;
+left: 50%;
+margin-left: -25px;
+position: absolute;
+width: 50px;
+}
+
+.site-heading h2 span {
+color: var(--carmine);
+}
+
+.site-heading {
+margin-bottom: 60px;
+overflow: hidden;
+margin-top: -5px;
+}

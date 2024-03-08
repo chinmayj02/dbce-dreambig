@@ -679,9 +679,9 @@ path.two {
 /* glimpses */
 .slider {
     margin-top: 60px;
-    height: 100px;
+    height: 200px;
     position: relative;
-    width: 100%;
+    width: auto;
   
     /* display: grid; */
     place-items: center;
@@ -730,7 +730,7 @@ path.two {
   }
   
   .slide {
-    width: 150px;
+    width: auto;
     height: 60px;
   
     display: grid;
@@ -741,7 +741,8 @@ path.two {
 
   .slide img{
     object-fit: cover;
-    width: 100%;
+    width: auto;
+    max-height: 200px;
   }
 
   .slide:hover{
@@ -768,12 +769,13 @@ path.two {
 
   @keyframes scroll-odd {
     0% {
-      transform: translateX(0px);
+      transform: translateX(calc(-150px * 5)); /* Start from the initial position of the far right */
     }
     100% {
-      transform: translateX(calc(150px * 5));
+      transform: translateX(0px); /* End at the initial position */
     }
   }
+  
   
   @media screen and (max-width: 768px) {
 
@@ -793,6 +795,13 @@ path.two {
     .slide {
       width: 80px;
     }
+
+
+  .slide img{
+    object-fit: cover;
+    width: auto;
+    max-height: 60px;
+  }
   
     @keyframes scroll {
       0% {
@@ -814,10 +823,10 @@ path.two {
 
     @keyframes scroll-odd {
         0% {
-          transform: translateX(0px);
+          transform: translateX(calc(-80px * 5)); /* Start from the initial position of the far right */
         }
         100% {
-          transform: translateX(calc(80px * 5));
+          transform: translateX(0px); /* End at the initial position */
         }
       }
   }

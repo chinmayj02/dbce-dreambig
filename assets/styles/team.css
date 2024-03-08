@@ -105,3 +105,231 @@ margin-bottom: 60px;
 overflow: hidden;
 margin-top: -5px;
 }
+
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #000000; */
+  }
+  
+  /* .box .group {
+    position: fixed;
+    width: 558px;
+    height: 533px;
+    top: 0;
+    left: 0;
+  } */
+  
+  .box .overlap-group {
+    position: relative;
+    width: 469px;
+    height: 513px;
+    top: 8px;
+    left: 10px;
+  }
+  
+  .box .rectangle {
+    position: absolute;
+    width: 320px;
+    height: 451px;
+    top: 0;
+    left: 71px;
+  }
+  
+  .box .img {
+    position: absolute;
+    width: 349px;
+    height: 71px;
+    top: 283px;
+    left: 120px;
+  }
+  
+  .box .name {
+    position: absolute;
+    width: 248px;
+    height: 65px;
+    top: 288px;
+    left: 168px;
+  }
+  
+  .box .star {
+    position: absolute;
+    width: 126px;
+    height: 125px;
+    top: 388px;
+    left: 0;
+  }
+  
+  .box .rectangle-2 {
+    position: absolute;
+    width: 220px;
+    height: 257px;
+    top: 30px;
+    left: 120px;
+  }
+  
+  .box .group-2 {
+    position: absolute;
+    width: 179px;
+    height: 160px;
+    top: 47px;
+    left: 139px;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .chinmay{
+    background-image: url(../images/team/chinmay.png);
+  }
+.ivan{
+    background-image: url(../images/team/ivan.png);
+
+}
+  .box .username {
+    position: absolute;
+    width: 163px;
+    height: 29px;
+    top: 233px;
+    left: 154px;
+    object-fit: cover;
+  }
+  
+  .box .star-2 {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    top: 13px;
+    left: 281px;
+  }
+  
+  .box .image {
+    width: 60px;
+    height: 61px;
+    top: 365px;
+    left: 122px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .box .image-2 {
+    width: 64px;
+    height: 73px;
+    top: 359px;
+    left: 196px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .box .image-3 {
+    width: 64px;
+    height: 61px;
+    top: 365px;
+    left: 274px;
+    position: absolute;
+    object-fit: cover;
+  }
+
+  /* Media query for devices with a maximum width of 768 pixels */
+@media only screen and (max-width: 768px) {
+    .box{
+        flex-direction: column;
+        /* margin: auto; */
+    }
+    .box .rectangle {
+        position: absolute;
+        width: 300px;
+        height: 451px;
+        top: 0;
+        left: 71px;
+      }
+      
+      .box .img {
+        position: absolute;
+        width: 280px;
+        height: 71px;
+        top: 284px;
+        left: 109px;
+      }
+      
+      .box .name {
+        position: absolute;
+        width: 248px;
+        height: 65px;
+        top: 291px;
+        left: 132px;
+      }
+      
+      .box .star {
+        position: absolute;
+        width: 102px;
+        height: 100px;
+        top: 388px;
+        left: 35px;
+      }
+      
+      .box .rectangle-2 {
+        position: absolute;
+        width: 220px;
+        height: 257px;
+        top: 30px;
+        left: 109px;
+      }
+      
+      .box .group-2 {
+        position: absolute;
+        width: 179px;
+        height: 160px;
+        top: 47px;
+        left: 129px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+      
+      .box .username {
+        position: absolute;
+        width: 163px;
+        height: 29px;
+        top: 233px;
+        left: 137px;
+      }
+      
+      .box .star-2 {
+        position: absolute;
+        width: 79px;
+        height: 79px;
+        top: 13px;
+        left: 281px;
+      }
+      
+      .box .image {
+        width: 60px;
+        height: 61px;
+        top: 365px;
+        left: 122px;
+        position: absolute;
+        object-fit: cover;
+      }
+      
+      .box .image-2 {
+        width: 64px;
+        height: 73px;
+        top: 359px;
+        left: 196px;
+        position: absolute;
+        object-fit: cover;
+      }
+      
+      .box .image-3 {
+        width: 64px;
+        height: 61px;
+        top: 365px;
+        left: 274px;
+        position: absolute;
+        object-fit: cover;
+      }
+    
+}

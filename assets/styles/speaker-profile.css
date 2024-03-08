@@ -88,21 +88,22 @@
     white-space: nowrap;
     transform: translateY(-35px) translateX(-50%);
     left: 50%;
-    color: #636b6f;
+    color: azure;
 }
 
 .card-jobtitle {
     position: absolute;
     bottom: 0;
-    font-size: 11px;
+    font-size: 15px;
     white-space: nowrap;
-    font-weight: 500;
+    font-weight: 700;
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-5px);
+    color: #636b6f;
 }
 
 .card-main {

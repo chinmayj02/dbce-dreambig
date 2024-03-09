@@ -220,6 +220,7 @@
     .flag {
         background: rgb(255, 255, 255);
         z-index: 15;
+        text-align: center;
     }
 
     .direction-l .flag:before,

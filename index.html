@@ -65,17 +65,21 @@
 
     <!-- section - hero -->
     <section id="hero">
+        <div id="vanta-container">
+            <!-- Vanta.js Globe will be rendered here -->
+        </div>
         <div class="row info">
             <span class="dbce">Don Bosco College Of Engineering, Fatorda Goa</span>
-            <span class="initiative">An initiative by Computer Engineering Department</span>
+            <span class="initiative">An initiative by <strong> Computer Engineering Department </strong></span>
             <span class="dreambig-text"><img src="./assets/images/big dream logo.png" class="dreambig-icon"></img>DBCE
                 DREAMBIG</span>
             <img src="./assets/images/big dream logo.png" class="dreambig" style="display: none;">
             <span class="year">2024</span>
             <span class="iic">An Industry - Institute Connect</span>
             <span class="date">15<sup>th</sup> March 2024</span>
+            <a id="action" href="#intro"></a>
         </div>
-        <a id="action" href="#intro"></a>
+        
     </section>
 
     <!-- section - introduction -->
@@ -607,8 +611,8 @@
         <!--  Carousel 1 -->
         <div class="slider">
             <div class="slide-track2">
-                <div class="slide bg-red-500"><img src="assets/images/glimpses/glimpses1.JPG"></div>
                 <div class="slide bg-purple-500"><img src="assets/images/glimpses/glimpses2.JPG"></div>
+                <div class="slide bg-red-500"><img src="assets/images/glimpses/glimpses1.JPG"></div>
                 <div class="slide bg-blue-500"><img src="assets/images/glimpses/glimpses3.JPG"></div>
                 <div class="slide bg-green-500"><img src="assets/images/glimpses/glimpses4.JPG"></div>
                 <div class="slide bg-pink-500"><img src="assets/images/glimpses/glimpses5.JPG"></div>
@@ -811,7 +815,7 @@
     <script>
         // hreo section animated globe
         VANTA.GLOBE({
-            el: "#hero",
+            el: "#vanta-container",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -821,6 +825,8 @@
             scaleMobile: 1.00,
             // color: 0x960031  ,
             // backgroundColor: 0x121313  
+            // backgroundAlpha: 0.3
+            
         })
         // expand schedule
         function expand(element) {
